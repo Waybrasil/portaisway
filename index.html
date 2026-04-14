@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portais Internos — Way Concessões</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-area">
+        <div class="logo-icon">
+          <i class="fa-solid fa-road"></i>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">Way Concessões</span>
+          <span class="logo-subtitle">Portais Internos</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="search-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="searchInput" class="search-input" placeholder="Buscar portal ou base..." />
+          <button class="search-clear" id="searchClear" title="Limpar busca"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Central de Portais</h1>
+      <p class="hero-desc">Acesse rapidamente os portais internos da Way Brasil</p>
+    </div>
+    <div class="hero-bg-pattern"></div>
+  </section>
+
+  <!-- FILTRO DE BASES -->
+  <nav class="filter-bar" id="filterBar" aria-label="Filtrar por base">
+    <div class="filter-inner">
+      <button class="filter-btn active" data-filter="all">
+        <i class="fa-solid fa-grip"></i> Todas
+      </button>
+      <!-- gerado pelo JS -->
+    </div>
+  </nav>
+
+  <!-- GRID DE BASES -->
+  <main class="main-content" id="mainContent">
+    <div class="bases-grid" id="basesGrid">
+      <!-- gerado pelo JS -->
+    </div>
+    <div class="no-results hidden" id="noResults">
+      <i class="fa-solid fa-magnifying-glass-minus"></i>
+      <p>Nenhum portal encontrado para "<span id="noResultsTerm"></span>"</p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Way Concessões &mdash; Uso interno. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- MODAL DE LINK -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <p class="modal-base" id="modalBase"></p>
+      <a class="modal-btn" id="modalLink" href="#" target="_blank" rel="noopener">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Portal
+      </a>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
