@@ -231,7 +231,7 @@ const BASES = [
     portals: [
 
       { name: "MEU RH",
-        url:  "https://portalweb.way364.com.br/web/app/RH/PortalMeuRH/#/login",
+        url:  "https://portalweb.way364.com.br:8081/web/app/RH/PortalMeuRH/#/login",
         icon: "fa-solid fa-user-tie" },
 
       { name: "GENERO",
